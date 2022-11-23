@@ -1,8 +1,8 @@
 async function fetchAssignments() {
 
-    let assID = document.getElementById("classIdInput").value 
+    let classID = document.getElementById("classIdInput").value 
 
-    let response = await fetch("/users?assIs=" + assID)
+    let response = await fetch("/users?assIs=" + classID)
     let result = await response.json()
 
     console.log(result)
