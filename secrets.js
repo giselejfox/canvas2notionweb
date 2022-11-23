@@ -1,0 +1,3 @@
+let canvasToken = "10~40DCu6j3y1B3Qtr89G8CyCRoECSXYTa9tmm03SMSNiVY704nym7KMlEztmB83ojx"
+
+export default canvasToken
