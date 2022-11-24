@@ -2,23 +2,28 @@
 
 
 // makes a request to the classes.js to get the classes for this user
-async function fetchClasses() {
-    
-}
 
 // makes a request to assignments.js to get the assignments for this user from canvas
 async function fetchAssignments() {
 
     let classID = document.getElementById("classIdInput").value 
 
-    // let response = await fetch("/users?classID=" + classID)
-    // let result = await response.json()
+    // get assignment groups
+    let response = await fetch("/users/assignmentGroups?classID=" + classID)
+    let assignmentGroups = await response.json()
 
-    let testpython = await fetch('/usePython')
-    let pythonresult = await testpython.json()
+    // get the assignments from the assignment group IDs
+    let nextResponse = await fetch("/users/assignments", {
+        method: "POST",
+        body: assignmentGroups
+    })
+    let assignments = await nextResponse.json()
 
+    // let testpython = await fetch('/usePython')
+    // let pythonresult = await testpython.json()
 
-    // console.log(result)
-    console.log(pythonresult)
+    console.log("assignmentGroups: " + assignmentGroups.result)
+    console.log("assignments" + assignments)
+    // console.log(pythonresult)
 }
 
