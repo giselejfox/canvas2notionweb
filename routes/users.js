@@ -8,7 +8,9 @@ router.get('/', async function(req, res, next) {
   try {
     console.log("made it in users.js")
     
-    let url = "https://canvas.uw.edu/api/v1/courses/" + req.query.classID + "/assignment_groups"
+    //let url = "https://canvas.uw.edu/api/v1/courses/" + req.query.classID + "/assignment_groups"
+
+    let url = "https://canvas.uw.edu/api/v1/courses/1581366/assignment_groups"
 
     //let url = "https://canvas.uw.edu/api/v1/courses?enrollment_state=completed"
     //let url = "https://canvas.uw.edu/api/v1/users/self/favorites/courses" //?include[]=term&exclude[]=enrollments&sort=nickname"
