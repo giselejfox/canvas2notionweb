@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 
 import usersRouter from './routes/users.js';
+import usePythonRouter from './routes/usepython.js';
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -20,5 +21,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/users', usersRouter);
+app.use('/usePython', usePythonRouter);
 
 export default app;
