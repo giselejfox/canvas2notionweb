@@ -1,7 +1,7 @@
-// 
-
-
-// makes a request to the classes.js to get the classes for this user
+// Tries to sign into Notion using the SDK
+async function signIntoNotion() {
+    
+}
 
 // makes a request to assignments.js to get the assignments for this user from canvas
 async function fetchAssignments() {

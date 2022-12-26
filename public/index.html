@@ -12,6 +12,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
   <h1>Canvas 2 notion</h1>
+  <a href="https://api.notion.com/v1/oauth/authorize?owner=user&client_id=a26f6fdd-ca6f-4652-b803-220f29e97bb3&redirect_uri=https%3A%2F%2Fcanvas2notion.web.app%2Fredirect&response_type=code" ><button onClick="signIntoNotion()">Click to sign into Notion</button></a>
+
   <p>Enter your canvas token down below</p>
   <input type="text" id="canvasToken"/>
   <p>Enter your notion token down below</p>
@@ -23,6 +25,8 @@
   <p>Enter your class id down below to show assignment groups</p>
   <input type="text" id="classIdInput"/>
   <button onClick="fetchAssignments()">Click for assignments</button>
+
+  <div id="results"></div>
 </body>
 
 </html>

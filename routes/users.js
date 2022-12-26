@@ -19,6 +19,7 @@ router.get('/assignmentGroups', async function(req, res, next) {
         Authorization: "Bearer " + canvasToken
       }
     })
+    
     let assignmentGroups = await response.json()
 
     console.log("got assignment groups: " + assignmentGroups.length)
